@@ -1,0 +1,141 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+/* リセットCSS */
+
+.header-base {
+  background-color: #e47676;
+  height: 72px;
+  width: 100vw;
+  display: flex;
+}
+
+.header-logo {
+  display: flex; 
+  align-items: center;
+}
+.logo-image {
+  height: 60px;
+  width: 60px;
+  margin-left: 20px;
+}
+
+.title-image {
+  height: 40px;
+  width: 170px;
+  margin-left: 10px;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.result-button a {
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  border-radius: 10px;
+  padding: 14px;
+  margin-right: 5px;
+}
+
+.guide-button a{
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  border-radius: 10px;
+  padding: 14px;
+  margin-right: 5px;
+
+}
+
+.ranking-button a {
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  content: "";
+  width: 500px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px #bbb solid;
+  margin-left: 30px;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+button {
+  height: 40px;
+  background-color: white;
+  border: 1px #bbb solid;
+  border-radius: 10px;
+}
+
+.header-user {
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 25%;
+  padding: 1vh 0;
+}
+
+.login a{
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  border-radius: 10px;
+  padding: 14px;
+  margin-right: 5px;
+}
+
+.sign-up a{
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  border-radius: 10px;
+  padding: 14px;
+  margin-right: 5px;
+}
+
+.username a{
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  border-radius: 10px;
+  padding: 14px; 
+  margin-right: 5px;
+}
+
+.tweet-button a{
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  border-radius: 10px;
+  padding: 14px;
+  margin-right: 5px;
+}
