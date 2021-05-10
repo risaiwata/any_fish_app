@@ -94,6 +94,11 @@ button {
   border-radius: 10px;
 }
 
+.search-logo {
+  width :20px; 
+  height :20px;
+}
+
 .header-user {
   font-size: 12px;
   display: flex;
