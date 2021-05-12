@@ -1,17 +1,49 @@
+<div class = 'content'>
 <div class = 'main-top-content'>
     <div class = 'main-top-left-content'>
-    <div id="jmap"></div>
+        <div class = 'shiping-agent-jmap-title'>
+        船宿を探す
+        </div>
+        <div class= 'japan-map'>
+        <%= render 'shared/japan_map' %>
+        </div>
     </div>
     <div class = 'main-top-right-content'>
+        <div class = 'shipping-agent-sign-up'>
+            <a href="#">船宿の新規登録はこちら</a>
+        </div>
+        <div class = 'shipping-agent-sign-in'>
+        <a href="#">船宿さんログイン></a>
+        </div>
+        <div class = 'result-search'>
+            <%= image_tag '釣果検索背景.jpeg'%>
+            <a href="#"><i class="" ></i> 釣果検索</a>
+        </div>
+        <div class ='admin-notice'>
+        <p>お知らせ</p>
+        <ul>
+        <li>これはお知らせです①</li>
+        <li>これはお知らせです②</li>
+        </ul>
+        </div>
     </div>
 </div>
 <div class = 'main-bottom-content'>
     <div class = 'main-bottom-left-content'>
+        <li class='list'>
+        <%= link_to "#" do %>
+            <div class="previews">
+                <div class="slider">
+                <%= image_tag '釣果検索背景.jpeg', class:'sample' %>
+                <%= image_tag '釣果検索背景.jpeg', class:'sample' %>
+                <%= image_tag '釣果検索背景.jpeg', class:'sample' %>
+                </div>
+            </div>
+        <% end %>
+        </li>
     </div>
     <div class = 'main-bottom-right-content'>
     </div>
 </div>
-
-    <!-- 共通ヘッダー -->
-
+</div>
 <!-- これはHTML上でコメントアウトされた一文です -->
