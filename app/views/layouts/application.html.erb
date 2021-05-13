@@ -51,18 +51,24 @@
         <!-- ユーザー管理 -->
         <!-- ログインで表示を変える -->
         <div class = 'header-user'>
-          <div class = 'login'>
-            <a href="#">Log in</a>
-          </div>
-          <div class = 'sign-up'>
-            <a href="#">Sing up</a>
-          </div>
-          <div class = 'username'>
+        <% if angler_signed_in? %>
+        <div class = 'username'>
             <a href="#">こんにちはAさん</a>
           </div>
           <div class = 'tweet-button'>
             <a href="#">釣果を投稿する</a>
           </div>
+          <div class = 'tweet-button'>
+            <%= link_to 'Log out', destroy_angler_session_path, method: :delete, class: "logout" %>
+          </div>
+          <% else %>
+          <div class = 'login'>
+            <%= link_to 'Log in', new_angler_session_path, class: "login" %>
+          </div>
+          <div class = 'sign-up'>
+            <%= link_to 'Sing up', new_angler_registration_path, class: "sign-up" %>
+          </div>
+          <% end %>
         </div>
         <!-- //ログインで表示を変える// -->
       </div>

@@ -58,3 +58,5 @@ gem 'pry-rails'
 gem 'jquery-rails'
 gem 'jcanvas-rails', '~> 0.1.0'
 gem 'bxslider-rails'
+
+gem 'devise'
