@@ -24,7 +24,6 @@
 
 /* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
-  width: 70%;
   background-color: white;
   padding-bottom: 70px;
 }

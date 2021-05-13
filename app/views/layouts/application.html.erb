@@ -53,20 +53,20 @@
         <div class = 'header-user'>
         <% if angler_signed_in? %>
         <div class = 'username'>
-            <a href="#">こんにちはAさん</a>
+            <p>こんにちは<%= link_to current_angler.nickname, "#", class: "username" %>さん</p>
           </div>
           <div class = 'tweet-button'>
             <a href="#">釣果を投稿する</a>
           </div>
           <div class = 'tweet-button'>
-            <%= link_to 'Log out', destroy_angler_session_path, method: :delete, class: "logout" %>
+            <%= link_to 'Sign out', destroy_angler_session_path, method: :delete, class: "logout" %>
           </div>
           <% else %>
           <div class = 'login'>
-            <%= link_to 'Log in', new_angler_session_path, class: "login" %>
+            <%= link_to 'Sign in', new_angler_session_path, class: "login" %>
           </div>
           <div class = 'sign-up'>
-            <%= link_to 'Sing up', new_angler_registration_path, class: "sign-up" %>
+            <%= link_to 'Sign up', new_angler_registration_path, class: "sign-up" %>
           </div>
           <% end %>
         </div>

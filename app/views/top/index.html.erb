@@ -11,10 +11,10 @@
     <div class = 'main-top-right-content'>
         <div class = 'shipping-agent-sign-up'>
         
-            <a href="#">船宿の新規登録はこちら</a>
+            <%= link_to '船宿の新規登録はこちら', new_agent_registration_path, class: "shipping-agent-sign-up-a" %>
         </div>
         <div class = 'shipping-agent-sign-in'>
-        <a href="#">船宿さんログイン></a>
+        <%= link_to '船宿さんログイン>', new_agent_session_path, class: "shipping-agent-sign-in-a" %>
         </div>
         <div class = 'result-search'>
             <%= image_tag '釣果検索背景.jpeg'%>

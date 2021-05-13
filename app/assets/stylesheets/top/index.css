@@ -134,7 +134,7 @@ ul,li {
   margin-right: 5px;
 }
 
-.username a{
+.username p{
   color: azure;
   text-decoration: none;
   border: 1px solid azure;
@@ -316,7 +316,7 @@ svg {
   margin-right: 30px;
 }
 
-.shipping-agent-sign-up a{
+.shipping-agent-sign-up-a {
   color: #fff;
   background-color: #e47676;
   font-size: 20px;
@@ -331,7 +331,7 @@ font-size: 20px;
 margin-top: 20px;
 margin-left: 90px;
 }
-.shipping-agent-sign-in a {
+.shipping-agent-sign-in-a {
   color: darkgrey;
 }
 
