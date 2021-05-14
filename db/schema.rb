@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_05_12_045457) do
     t.string "last_name", null: false
     t.string "first_name_kana", null: false
     t.string "last_name_kana", null: false
-    t.integer "prefectue", null: false
+    t.integer "prefecture_id", default: 0, null: false
     t.string "address", null: false
     t.string "harbor", null: false
     t.text "how_to_go1", null: false
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 2021_05_12_045457) do
     t.string "regular_holiday", null: false
     t.string "ice", null: false
     t.string "target", null: false
-    t.string "ship_type", null: false
-    t.string "fishing_type", null: false
+    t.integer "ship_type_id", null: false
+    t.integer "fishing_type_id", null: false
     t.text "profile"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

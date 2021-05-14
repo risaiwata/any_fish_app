@@ -100,8 +100,13 @@
     </div>
   </div>
   <% end %>
+  <div class ='angular-footer'>
+<div>
+<%= link_to '会員登録済みのかたはこちら', new_angler_session_path, class: 'register-info-2' %>
+</div>
+<div>
+<%= link_to 'パスワードをお忘れですか？', edit_angler_password_path, class: "register-info-2" %>
+</div>
+</div>
 </div>
 
-
-<%= link_to '会員登録済みのかたはこちら', new_angler_session_path, class: 'register-info-2' %>
-    <%= link_to 'パスワードをお忘れですか？', edit_angler_password_path, class: "register-info-2" %>

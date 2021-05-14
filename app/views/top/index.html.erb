@@ -9,13 +9,21 @@
         </div>
     </div>
     <div class = 'main-top-right-content'>
-        <div class = 'shipping-agent-sign-up'>
-        
-            <%= link_to '船宿の新規登録はこちら', new_agent_registration_path, class: "shipping-agent-sign-up-a" %>
-        </div>
-        <div class = 'shipping-agent-sign-in'>
-        <%= link_to '船宿さんログイン>', new_agent_session_path, class: "shipping-agent-sign-in-a" %>
-        </div>
+        <% if agent_signed_in? %>
+            <div class = 'shipping-agent-sign-up'>
+                <%= link_to '船宿ブログ投稿はこちら', new_agent_registration_path, class: "shipping-agent-sign-up-a" %>
+            </div>
+            <div class = 'shipping-agent-sign-in'>
+                <%= link_to '船宿さんログアウト>', destroy_agent_session_path, method: :delete, class: "shipping-agent-sign-in-a" %>
+            </div>
+        <% else %>
+            <div class = 'shipping-agent-sign-up'>
+                <%= link_to '船宿の新規登録はこちら', new_agent_registration_path, class: "shipping-agent-sign-up-a" %>
+            </div>
+            <div class = 'shipping-agent-sign-in'>
+                <%= link_to '船宿さんログイン>', new_agent_session_path, class: "shipping-agent-sign-in-a" %>
+            </div>
+        <% end %>
         <div class = 'result-search'>
             <%= image_tag '釣果検索背景.jpeg'%>
             <a href="#"><i class="" ></i> 釣果検索</a>

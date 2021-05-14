@@ -12,7 +12,7 @@ class DeviseCreateAgents < ActiveRecord::Migration[6.0]
       t.string :last_name,           null: false
       t.string :first_name_kana,     null: false
       t.string :last_name_kana,      null: false
-      t.integer :prefectue,          null: false
+      t.integer :prefecture_id,          null: false, default: "0"
       t.string :address,             null: false
       t.string :harbor,              null: false
       t.text   :how_to_go1,          null: false
@@ -23,8 +23,8 @@ class DeviseCreateAgents < ActiveRecord::Migration[6.0]
       t.string :regular_holiday,     null: false
       t.string :ice,                 null: false
       t.string :target,              null: false
-      t.string :ship_type,           null: false
-      t.string :fishing_type,        null: false
+      t.integer :ship_type_id,           null: false
+      t.integer :fishing_type_id,        null: false
       t.text   :profile 
 
 

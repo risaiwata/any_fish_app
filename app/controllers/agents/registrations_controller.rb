@@ -5,9 +5,10 @@ class Agents::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    #@results = Agent.where('prefecture_id IN(?)', params[:prefecture_id])
+    super
+  end
 
   # POST /resource
   # def create
@@ -42,7 +43,7 @@ class Agents::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :agentname, :agentname_kana, :first_name, :last_name, :first_name_kana, :last_name_kana, :prefectue, :address, :harbor, :how_to_go1, :how_to_go2, :tel1, :tel2, :homepage, :regular_holiday, :ice, :target, :ship_type, :fishing_type, :profile])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :agentname, :agentname_kana, :first_name, :last_name, :first_name_kana, :last_name_kana, :prefecture_id, :address, :harbor, :how_to_go1, :how_to_go2, :tel1, :tel2, :homepage, :regular_holiday, :ice, :target, :ship_type_id, :fishing_type_id, :profile])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
