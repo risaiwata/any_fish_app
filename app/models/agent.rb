@@ -28,4 +28,14 @@ class Agent < ApplicationRecord
           筏・カセ釣り:8,スッテ・ツノ:9,エギング:10,タイラバ:11, ひとつテンヤ:12,ジギング・キャスティング:13,
           その他の釣り方:14
         }, _prefix: true
+
+        with_options presence: true do
+          validates :agentname
+          validates :agentname_kana
+          validates :email
+          validates :encrypted_password
+          validates :first_name
+          
+        end
+
 end
