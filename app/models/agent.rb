@@ -31,12 +31,24 @@ class Agent < ApplicationRecord
         }, _prefix: true
 
         with_options presence: true do
-          validates :agentname
-          validates :agentname_kana
+          validates :agentname, format: { with:/\A[ぁ-んァ-ン一-龥々ー]+\z/}
+          validates :agentname_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
           validates :email
           validates :encrypted_password
-          validates :first_name
-          
+          validates :first_name, format: { with:/\A[ぁ-んァ-ン一-龥々ー]+\z/}
+          validates :last_name, format: { with:/\A[ぁ-んァ-ン一-龥々ー]+\z/}
+          validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
+          validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
+          validates :prefecture_id, numericality: {other_than: 0, message: "can't be blank"}
+          validates :address
+          validates :harbor
+          validates :how_to_go1
+          validates :tel1, format: {with:/\A\d{10,11}\z/, message: '電話番号は11桁以内の数値のみ保存可能なこと'}
+          validates :regular_holiday
+          validates :ice
+          validates :target
+          validates :ship_type_id, numericality: {other_than: 0, message: "can't be blank"}
+          validates :fishing_type_id, numericality: {other_than: 0, message: "can't be blank"}
         end
 
 end

@@ -17,4 +17,5 @@ Rails.application.routes.draw do
       registrations: 'agents/registrations'
     }
     root  'top#index'
+    #resources :users, only: [:show]
 end

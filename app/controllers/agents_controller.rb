@@ -1,5 +1,6 @@
 class AgentsController < ApplicationController
   def show
-    @agentname = current_agent.agentname
+    @agent = Agent.find(current_agent.id)
   end
 end
+

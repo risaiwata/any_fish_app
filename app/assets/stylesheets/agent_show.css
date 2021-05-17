@@ -40,3 +40,19 @@
 .box-show {
   display: block;
 }
+
+/* プロフィールの中身 */
+
+.agent-profile-name {
+  font-size: 30px;
+}
+
+.icon_image {
+  width: 200px;
+  height: 200px;
+  //サイズ指定
+  border-radius: 100px;
+  //画像を丸くする
+  object-fit: cover;
+  //タテヨコ比を変えないままトリミング
+}
