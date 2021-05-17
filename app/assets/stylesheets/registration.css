@@ -8,15 +8,17 @@
 }
 
 
-.form-wrapper {
+.agent-form-wrapper {
+
   padding-top: 80px;
+  
 }
 
-/* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
   background-color: white;
   padding-bottom: 70px;
   width: 500px;
+  margin-left: 450px;
 }
 
 .form-header {

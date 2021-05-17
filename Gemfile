@@ -64,3 +64,8 @@ gem 'devise'
 gem 'active_hash'
 
 gem 'enum_help'
+
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
+gem 'carrierwave'
