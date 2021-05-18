@@ -1,34 +1,97 @@
   <div class = 'agent-show-main-container'>
     <div class ='agent-profile-name'>
-      <%= current_agent.agentname %>
+      <%= @agent.agentname %>
     </div>
-  
-<div class="agent-show-container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="tab-panels col-xs-12">
-        <!-- creating tabs here -->
-        <ul class="tabs">
-          <li rel="panel-1" class="active"> 基本情報</li>
-          <li rel="panel-2"> ブログ</li>
-          <li rel="panel-3"> 釣果情報</li>
-          <li rel="panel-4"> 予約</li>
-        </ul>
+    <div class ='icon_image_content'>
+      <%= image_tag @agent.image.url , class: "icon_image" %>  
+    </div>
+      <div class="agent-show-container">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="tab-panels col-xs-12">
+<!-- creating tabs here -->
 
-        <div id="panel-1" class="panel active">
-          <p> 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
-        </div>
+  <ul class="tabs">
+    <li rel="panel-1" class="active"> 基本情報</li>
+    <li rel="panel-2"> ブログ</li>
+    <li rel="panel-3"> 投稿された釣果</li>
+    <li rel="panel-4"> 予約情報</li>
+  </ul>
 
-        <div id="panel-2" class="panel">
+  <div id="panel-1" class="panel active">
+    <div class ='main-agent-profile-tab'>
+      <table>
+        <tr>
+          <th>ターゲット</th>
+          <td><%= @agent.target %></td>
+        </tr>
+        <tr>
+          <th>業種</th>
+          <td><%= Agent.ship_types.key(@agent.ship_type_id)%></td>
+        </tr>
+        <tr>
+          <th>釣り方</th>
+          <td><%= Agent.fishing_types.key(@agent.fishing_type_id)%></td>
+        </tr>
+        <tr>
+          <th>所在地</th>
+          <td><%= Agent.prefectures.key(@agent.prefecture_id) %><%= @agent.address%></td>
+        </tr>
+        <tr>
+          <th>港</th>
+          <td><%= @agent.harbor%></td>
+        </tr>
+        <th>車での行き方</th>
+          <td><%= @agent.how_to_go1 %></td>
+        </tr>
+          <th>公共機関での行き方</th>
+          <td><%= @agent.how_to_go2 %></td>
+        </tr>
+        <tr>
+          <th>定休日</th>
+          <td><%= @agent.regular_holiday %></td>
+        </tr>
+        <tr>
+          <th>氷</th>
+          <td><%= @agent.ice %></td>
+        </tr>
+        <tr>
+          <th>席順</th>
+          <td><%=  %></td>
+        </tr>
+        <tr>
+          <th>ホームページ</th>
+          <td><%= @agent.homepage %></td>
+        </tr>
+        <tr>
+          <th>連絡先1</th>
+          <td><%= @agent.tel1 %></td>
+        </tr>
+        <tr>
+          <th>連絡先2</th>
+          <td><%= @agent.tel2 %></td>
+        </tr>
+        <tr>
+          <th>船宿よりご案内</th>
+          <td><%= @agent.profile %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+              
+  <div id="panel-2" class="panel">
           <p > 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </div>
-        <div id="panel-3" class="panel">
+  </div>
+  <div id="panel-3" class="panel">
           <p> 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </div>
-        <div id="panel-4" class="panel">
+  </div>
+  <div id="panel-4" class="panel">
           <p> 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
-        </div>
-      </div>
+  </div>
+
+</div>
+
     </div> <!-- row ends here -->
+  
   </div> <!--container end here -->
 </div>

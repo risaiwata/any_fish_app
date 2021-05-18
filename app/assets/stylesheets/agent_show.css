@@ -13,7 +13,7 @@ padding-top: 90px;
 .tab-panels ul li {
     list-style-type: none;
     display: inline-block;
-    background: #c55;
+    background: #e47676;
     margin: 0;
     padding: .5em 1.5em;
     border-radius: .5em .5em 0 0;
@@ -46,18 +46,77 @@ padding-top: 90px;
 display:block;
 }
 
-
 /* プロフィールの中身 */
 
 .agent-profile-name {
   font-size: 30px;
-  color: rgb(163, 159, 159);
-  padding: 15px;
+  color: rgb(187, 187, 187);
+  text-align: center;
+}
+
+.icon_image_content {
 }
 
 .icon_image {
+  padding-top: 10px;
   width: 200px;
   height: 200px;
   border-radius: 100px;
   object-fit: cover;
+  margin-left: 610px;
+}
+
+.tab-agent-profile-target {
+  font-size: 15px;
+  background-color: #e47676;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tab-agent-profile-target-content{
+  padding: 15px;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr{
+  border-bottom: solid 2px white;
+}
+
+table tr:last-child{
+  border-bottom: none;
+}
+
+table th{
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #52c2d0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table th:after{
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top:calc(50% - 10px);
+  right:-10px;
+  border-left: 10px solid #52c2d0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+table td{
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
 }

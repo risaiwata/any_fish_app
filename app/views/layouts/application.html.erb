@@ -64,7 +64,7 @@
           </div>
           <% elsif agent_signed_in? %>
           <div class = 'username'>
-            <p>こんにちは<%= link_to current_agent.agentname, agents_show_path, class: "username" %>さん</p>
+            <p>こんにちは<%= link_to current_agent.agentname, agent_path(current_agent.id), class: "username" %>さん</p>
           </div>
           <% else %>
           <div class = 'login'>

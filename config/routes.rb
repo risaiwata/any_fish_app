@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'agents/show'
+  
   devise_for :anglers, controllers: {
     sessions:      'anglers/sessions',
     passwords:     'anglers/passwords',
@@ -12,5 +12,5 @@ Rails.application.routes.draw do
       registrations: 'agents/registrations'
     }
     root  'top#index'
-    #resources :users, only: [:show]
+    resources :agents, only: [:show,:edit,:update]
 end
