@@ -55,6 +55,7 @@ display:block;
 }
 
 .icon_image_content {
+  text-align : center
 }
 
 .icon_image {
@@ -63,7 +64,7 @@ display:block;
   height: 200px;
   border-radius: 100px;
   object-fit: cover;
-  margin-left: 610px;
+
 }
 
 .tab-agent-profile-target {
