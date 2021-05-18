@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
   get 'agents/show'
-  devise_for :admins, controllers: {
-    sessions:      'admins/sessions',
-    passwords:     'admins/passwords',
-    registrations: 'admins/registrations'
-  }
   devise_for :anglers, controllers: {
     sessions:      'anglers/sessions',
     passwords:     'anglers/passwords',

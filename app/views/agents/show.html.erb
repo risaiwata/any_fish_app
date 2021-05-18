@@ -1,41 +1,34 @@
-<div class = agent-show-main-container>
-
-  <h1 class ='agent-profile-name'>
-  <%= current_agent.agentname %>
-  </h1>
+  <div class = 'agent-show-main-container'>
+    <div class ='agent-profile-name'>
+      <%= current_agent.agentname %>
+    </div>
   
-  <div class="container">
-    <ul class="tab-list">
-      <li class="tab box-active">基本情報</li>
-      <li class="tab">船宿ブログ</li>
-      <li class="tab">釣果情報</li>
-    </ul>
-<!--船宿さんの基本情報-->
-    <div class="tabbox-contents">
-      <div class="tabbox box-show">
-        <div class = 'agent-profile'>
-          <div class="agent-box">
-            <%= @agent.agentname_kana %>
-            <h2 class="name">
-              <%= @agent.agentname %>
-            </h2>
-          <div class="agent-img-content">
-            <img src=<%= @agent.image %> class = "icon_image">
-          </div>
-          <span class="agent-postage">
-            <%= @agent.prefecture_id %>
-          </span>
+<div class="agent-show-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="tab-panels col-xs-12">
+        <!-- creating tabs here -->
+        <ul class="tabs">
+          <li rel="panel-1" class="active"> 基本情報</li>
+          <li rel="panel-2"> ブログ</li>
+          <li rel="panel-3"> 釣果情報</li>
+          <li rel="panel-4"> 予約</li>
+        </ul>
+
+        <div id="panel-1" class="panel active">
+          <p> 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+        </div>
+
+        <div id="panel-2" class="panel">
+          <p > 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div id="panel-3" class="panel">
+          <p> 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div id="panel-4" class="panel">
+          <p> 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
         </div>
       </div>
-      <div class="tabbox">
-        <p>タブ2の中身が入ります。</p>
-        <p>タブ2の中身が入ります。</p>
-        <p>タブ2の中身が入ります。</p>
-      </div>
-      <div class="tabbox">
-        <p>タブ3の中身が入ります。</p>
-        <p>タブ3の中身が入ります。</p>
-        <p>タブ3の中身が入ります。</p>
-      </div>
-    </div>
-  </div>
+    </div> <!-- row ends here -->
+  </div> <!--container end here -->
+</div>

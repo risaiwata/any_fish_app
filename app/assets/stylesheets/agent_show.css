@@ -1,58 +1,63 @@
 .agent-show-main-container {
-  padding-top: 80px;
+padding-top: 90px;
 }
 
-.container {
-  margin: 10px;
-  border: 1px solid #ccc;
+.agent-show-container {
+  max-width: 80%;
+  margin-left: 150px;
 }
-/* ↓タブを横並び↓ */
-.tab-list {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
+.tab-panels ul {
+  margin: 0;
+  padding: 0;
 }
-/* ↓タブのデザイン↓ */
-.tab {
-  width: 100%;
-  padding: 10px;
-  cursor: pointer;
-  border-left: solid 1px #CCC;
-  border-bottom: solid 1px #CCC;
+.tab-panels ul li {
+    list-style-type: none;
+    display: inline-block;
+    background: #c55;
+    margin: 0;
+    padding: .5em 1.5em;
+    border-radius: .5em .5em 0 0;
+    color: #fff;
+    font-weight: 50;
+    cursor: pointer;
+
+      }
+
+.tab-panels ul li:hover {
+    color: #fff;
+    background: #b20;
+          }
+
+.tab-panels ul li.active {
+    color: #fff;
+    background: #b20;
+  
+    }
+
+.tab-panels .panel  {
+    display:none;
+    background: white;
+    color: black;
+    padding: 1.5em;
+    border-radius: 0 0 .8em .8em;
+  }
+
+.tab-panels .panel.active {
+display:block;
 }
-.tab:first-child {
-  border-left: none;
-}
-/* ↓タブがアクティブになっている時のデザイン↓ */
-.tab-active {
-  color: #FFF;
-  background: #5b9fff;
-  transition: all 0.2s ease-in-out;
-}
-/* ↓タブの中身↓ */
-.tabbox {
-  /* ↓タブの中身を最初は非表示↓ */
-  display: none;
-  /* ↓タブの中身の余白↓ */
-  padding: 15px;
-}
-/* ↓このクラスがついている時だけタブの中身を表示↓ */
-.box-show {
-  display: block;
-}
+
 
 /* プロフィールの中身 */
 
 .agent-profile-name {
   font-size: 30px;
+  color: rgb(163, 159, 159);
+  padding: 15px;
 }
 
 .icon_image {
   width: 200px;
   height: 200px;
-  //サイズ指定
   border-radius: 100px;
-  //画像を丸くする
   object-fit: cover;
-  //タテヨコ比を変えないままトリミング
 }

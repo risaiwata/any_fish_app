@@ -1,15 +1,25 @@
-$(function() {
-  // ↓タブをクリックした時の処理↓
-  $('.tab').click(function(){
-      // ↓現在アクティブなタブを切り替え↓
-      $('.tab-active').removeClass('tab-active');
-      // ↓タブをアクティブにする↓
-      $(this).addClass('tab-active');
-      // ↓現在アクティブなタブの中身を非表示
-      $('.box-show').removeClass('box-show');
-      // ↓クリックしたタブから順番を取得↓
-      const index = $(this).index();
-      // ↓クリックしたタブと同じ順番のコンテンツを表示↓
-      $('.tabbox').eq(index).addClass('box-show');
-  });
+// Note to self: make it smarter
+$(document).ready(function() {
+                
+  // Step -1 : Create an event for click to each panel
+  $('.tab-panels .tabs li').on('click', function(){ //$-1 starts
+    $('.tab-panels .tabs .active').removeClass('active'); // removes active class from li that was clicked
+    $(this).addClass('active'); // adding the active class to this so switching tabs would switch the active class to the current li that was clicked and remove active class from previous li
+    var paneltoshow = $(this).attr('rel'); // storing and later on referencing li that was clicked using rel attribute. You can use anything else with say, data-yourIdname instead of rel. Upto you.
+
+//alert(paneltoshow);                       
+$('.tab-panels .panel.active').slideUp('100', function(){
+$(this).removeClass('active');              //console.log(this);
+
+$('#'+paneltoshow).delay('100').slideDown(function () {
+$(this).addClass('active');           //console.log(this);    
 });
+});
+
+  }); //$-1 ends
+
+
+
+
+  });
+/* ready ends here */
