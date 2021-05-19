@@ -9,9 +9,11 @@
         </div>
     </div>
     <div class = 'main-top-right-content'>
-        <% if agent_signed_in? %>
-            <div class = 'shipping-agent-sign-up'>
-                <%= link_to '船宿ブログ投稿はこちら', new_agent_registration_path, class: "shipping-agent-sign-up-a" %>
+        <% if angler_signed_in? %>
+        <!--釣果登録ユーザーは表示させない-->
+        <% elsif agent_signed_in? %>
+        <div class = 'shipping-agent-sign-up'>
+                <%= link_to '船宿ブログ投稿はこちら', new_blog_path, class: "shipping-agent-sign-up-a" %>
             </div>
             <div class = 'shipping-agent-sign-in'>
                 <%= link_to '船宿さんログアウト>', destroy_agent_session_path, method: :delete, class: "shipping-agent-sign-in-a" %>

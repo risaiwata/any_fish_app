@@ -1,0 +1,9 @@
+<div class="blog-contents-row">
+  <p><%= @agent.agentname %>さんの投稿一覧</p>
+  <% @blogs.each do |blog| %>
+    <div class ='hoge'>
+    <%= image_tag blog.image , class: "item-img" %>
+    <%= blog.title %>
+    </div>
+  <% end %>
+</div>

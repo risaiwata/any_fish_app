@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     }
     root  'top#index'
     resources :agents, only: [:show,:edit,:update]
+    resources :blogs, only: [:new, :create,:index, :show]
+
 end

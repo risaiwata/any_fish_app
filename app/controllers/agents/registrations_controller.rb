@@ -43,7 +43,7 @@ class Agents::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :agentname, :agentname_kana, :first_name, :last_name, :first_name_kana, :last_name_kana, :prefecture_id, :address, :harbor, :how_to_go1, :how_to_go2, :tel1, :tel2, :homepage, :regular_holiday, :ice, :target, :ship_type_id, :fishing_type_id, :profile, :image])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :agentname, :agentname_kana, :first_name, :last_name, :first_name_kana, :last_name_kana, :prefecture_id, :address, :harbor, :how_to_go1, :how_to_go2, :tel1, :tel2, :homepage, :regular_holiday, :ice, :target, :ship_type_id, :fishing_type_id, :profile, :sheet, :image])
   end
 
   # If you have extra params to permit, append them to the sanitizer.

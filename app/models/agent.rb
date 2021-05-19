@@ -33,8 +33,9 @@ class Agent < ApplicationRecord
         with_options presence: true do
           validates :agentname, format: { with:/\A[ぁ-んァ-ン一-龥々ー]+\z/}
           validates :agentname_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
-          validates :email
-          validates :encrypted_password
+          validates :email, on: :create
+          VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i
+          validates :password, format: {with: VALID_PASSWORD_REGEX, message: "は英数字混合にしてください"}, on: :create
           validates :first_name, format: { with:/\A[ぁ-んァ-ン一-龥々ー]+\z/}
           validates :last_name, format: { with:/\A[ぁ-んァ-ン一-龥々ー]+\z/}
           validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
@@ -50,5 +51,7 @@ class Agent < ApplicationRecord
           validates :ship_type_id, numericality: {other_than: 0, message: "can't be blank"}
           validates :fishing_type_id, numericality: {other_than: 0, message: "can't be blank"}
         end
+
+        has_many :blogs
 
 end

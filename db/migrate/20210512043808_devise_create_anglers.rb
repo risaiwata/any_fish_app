@@ -12,6 +12,7 @@ class DeviseCreateAnglers < ActiveRecord::Migration[6.0]
       t.string :first_name_ruby,     null: false
       t.string :last_name_ruby,      null: false
       t.date   :birthdate,           null: false
+      t.text   :angler_profile       
 
       ## Recoverable
       t.string   :reset_password_token

@@ -17,7 +17,7 @@
     <li rel="panel-3"> 投稿された釣果</li>
     <li rel="panel-4"> 予約情報</li>
   </ul>
-
+  <!--基本情報の表示-->
   <div id="panel-1" class="panel active">
     <div class ='main-agent-profile-tab'>
       <table>
@@ -57,7 +57,7 @@
         </tr>
         <tr>
           <th>席順</th>
-          <td><%=  %></td>
+          <td><%=  @agent.sheet %></td>
         </tr>
         <tr>
           <th>ホームページ</th>
@@ -77,21 +77,43 @@
         </tr>
       </table>
     </div>
+    <br>
+    <% if agent_signed_in?%>
+  <div class='profile-edit-button'>
+    <%= link_to "プロフィールの編集", edit_agent_path, method: :get, class: 'profile-edit' %>
   </div>
-              
+  <% end %>
+  </div>
+  <!--ブログ投稿一覧-->
   <div id="panel-2" class="panel">
-          <p > ここは船宿ユーザーが投稿したブログが載ります</p>
+    <p class ='blog-list-tab'><%= @agent.agentname %>さんのブログ</p>
+    <!--一覧-->
+      <% @blogs.each do |blog| %>
+      <div class ='hogehoge'>
+        <li class='blog-list'>
+          <%= link_to blog_path(blog) do %>
+            <div class ='blog-content'>
+              <%= image_tag blog.image , class: "blog-img-thumb" %>
+              <p class ='blog-title-thumb'><%= blog.blog_title %></p>
+            </div>
+          <% end %>
+        </li>
+        </div>
+      <% end %>
+      <%#<%= paginate @blogs %>
   </div>
+  
+  <!--釣果投稿一覧-->
   <div id="panel-3" class="panel">
           <p> ここは釣果投稿ユーザーが投稿した船宿をタグ付けした釣果が載ります</p>
   </div>
   <div id="panel-4" class="panel">
           <p> ここは予約機能が表示されます。船宿側は予約枠の設定と予約の管理ができて釣果投稿側は予約枠の確認と予約ができます。</p>
   </div>
-
 </div>
 
     </div> <!-- row ends here -->
   
   </div> <!--container end here -->
+  
 </div>

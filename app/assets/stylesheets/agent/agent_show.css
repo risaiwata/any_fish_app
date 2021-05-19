@@ -94,7 +94,7 @@ table tr:last-child{
 table th{
   position: relative;
   text-align: left;
-  width: 30%;
+  width: 20%;
   background-color: #52c2d0;
   color: white;
   text-align: center;
@@ -121,3 +121,47 @@ table td{
   background-color: #eee;
   padding: 10px 0;
 }
+
+.profile-edit {
+  margin-top: 15px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #e47676;
+  border: 1px solid #e47676;
+  padding: 8px;
+}
+
+.profile-edit-button :hover{/*カーソルを当てたとき*/
+  background: rgba(49, 224, 255, 0.342);/*背景を半透明に*/
+  }
+
+.blog-list-tab {
+  color: lightslategrey;
+  font-size: 15px;
+}
+
+  .blog-list {
+    list-style: none;
+    float: left;
+  }
+  .hogehoge {
+  }
+
+  .blog-content {
+    position: relative;/*相対配置*/
+    margin: 10px;
+  }
+
+  .blog-title-thumb {
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 0;
+  left: 0;
+  background-color: rgba(81, 220, 255, 0.63);
+  padding: 2px;
+  }
+
+  .blog-img-thumb {
+    width: 200px;
+    height: 200px;
+  }

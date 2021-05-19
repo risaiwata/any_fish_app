@@ -86,7 +86,7 @@ ul,li {
 
 .search-input {
   content: "";
-  width: 400px;
+  width: 300px;
   height: 40px;
   border-radius: 10px;
   border: 1px #bbb solid;
@@ -94,25 +94,27 @@ ul,li {
   font-size: 13px;
 }
 
-.search-logo {
-  height: 40px;
+.search-button {
   background-color: white;
   border: 1px #bbb solid;
   border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  margin-right: 5px;
 }
 
 .search-logo {
   width :20px; 
-  height :20px;
+  height: 20px;
+  
 }
 
 .header-user {
   font-size: 12px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 20%;
   padding: 1vh 0;
 }
 
@@ -313,6 +315,8 @@ svg {
 .main-top-right-content {
   margin-right: 30px;
 }
+
+
 
 .shipping-agent-sign-up-a {
   color: #fff;

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_17_065049) do
+ActiveRecord::Schema.define(version: 2021_05_19_052310) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_065049) do
     t.integer "ship_type_id", null: false
     t.integer "fishing_type_id", null: false
     t.text "profile"
+    t.text "sheet", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -87,6 +88,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_065049) do
     t.string "first_name_ruby", null: false
     t.string "last_name_ruby", null: false
     t.date "birthdate", null: false
+    t.text "angler_profile"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -96,5 +98,15 @@ ActiveRecord::Schema.define(version: 2021_05_17_065049) do
     t.index ["reset_password_token"], name: "index_anglers_on_reset_password_token", unique: true
   end
 
+  create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "blog_title", null: false
+    t.text "blog_text", null: false
+    t.bigint "agent_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["agent_id"], name: "index_blogs_on_agent_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "blogs", "agents"
 end

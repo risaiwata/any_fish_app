@@ -42,7 +42,7 @@ class Anglers::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :nickname, :first_name, :last_name, :first_name_ruby, :last_name_ruby, :birthdate])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :nickname, :first_name, :last_name, :first_name_ruby, :last_name_ruby, :birthdate, :angler_profile])
   end
 
   
