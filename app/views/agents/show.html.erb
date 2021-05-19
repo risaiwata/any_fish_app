@@ -1,6 +1,6 @@
-  <div class = 'agent-show-main-container'>
-    <div class ='agent-profile-name'>
-      <%= @agent.agentname %>
+<div class = 'agent-show-main-container'>
+    <div>
+      <p class ='agent-profile-name-a'><%= @agent.agentname %> </p>
     </div>
     <div class ='icon_image_content'>
       <%= image_tag @agent.image.url , class: "icon_image" %>  
@@ -10,110 +10,106 @@
             <div class="row">
               <div class="tab-panels col-xs-12">
 <!-- creating tabs here -->
-
-  <ul class="tabs">
-    <li rel="panel-1" class="active"> 基本情報</li>
-    <li rel="panel-2"> ブログ</li>
-    <li rel="panel-3"> 投稿された釣果</li>
-    <li rel="panel-4"> 予約情報</li>
-  </ul>
+              <ul class="tabs">
+                <li rel="panel-1" class="active"> 基本情報</li>
+                <li rel="panel-2"> ブログ</li>
+                <li rel="panel-3"> 投稿された釣果</li>
+                <li rel="panel-4"> 予約情報</li>
+              </ul>
   <!--基本情報の表示-->
-  <div id="panel-1" class="panel active">
-    <div class ='main-agent-profile-tab'>
-      <table>
-        <tr>
-          <th>ターゲット</th>
-          <td><%= @agent.target %></td>
-        </tr>
-        <tr>
-          <th>業種</th>
-          <td><%= Agent.ship_types.key(@agent.ship_type_id)%></td>
-        </tr>
-        <tr>
-          <th>釣り方</th>
-          <td><%= Agent.fishing_types.key(@agent.fishing_type_id)%></td>
-        </tr>
-        <tr>
-          <th>所在地</th>
-          <td><%= Agent.prefectures.key(@agent.prefecture_id) %><%= @agent.address%></td>
-        </tr>
-        <tr>
-          <th>港</th>
-          <td><%= @agent.harbor%></td>
-        </tr>
-        <th>車での行き方</th>
-          <td><%= @agent.how_to_go1 %></td>
-        </tr>
-          <th>公共機関での行き方</th>
-          <td><%= @agent.how_to_go2 %></td>
-        </tr>
-        <tr>
-          <th>定休日</th>
-          <td><%= @agent.regular_holiday %></td>
-        </tr>
-        <tr>
-          <th>氷</th>
-          <td><%= @agent.ice %></td>
-        </tr>
-        <tr>
-          <th>席順</th>
-          <td><%=  @agent.sheet %></td>
-        </tr>
-        <tr>
-          <th>ホームページ</th>
-          <td><%= @agent.homepage %></td>
-        </tr>
-        <tr>
-          <th>連絡先1</th>
-          <td><%= @agent.tel1 %></td>
-        </tr>
-        <tr>
-          <th>連絡先2</th>
-          <td><%= @agent.tel2 %></td>
-        </tr>
-        <tr>
-          <th>船宿よりご案内</th>
-          <td><%= @agent.profile %></td>
-        </tr>
-      </table>
-    </div>
-    <br>
-    <% if agent_signed_in?%>
-  <div class='profile-edit-button'>
-    <%= link_to "プロフィールの編集", edit_agent_path, method: :get, class: 'profile-edit' %>
-  </div>
-  <% end %>
-  </div>
+              <div id="panel-1" class="panel active">
+                <div class ='main-agent-profile-tab'>
+                  <table>
+                    <tr>
+                      <th>ターゲット</th>
+                      <td><%= @agent.target %></td>
+                    </tr>
+                    <tr>
+                      <th>業種</th>
+                      <td><%= Agent.ship_types.key(@agent.ship_type_id)%></td>
+                    </tr>
+                    <tr>
+                      <th>釣り方</th>
+                      <td><%= Agent.fishing_types.key(@agent.fishing_type_id)%></td>
+                    </tr>
+                    <tr>
+                      <th>所在地</th>
+                      <td><%= Agent.prefectures.key(@agent.prefecture_id) %><%= @agent.address%></td>
+                    </tr>
+                    <tr>
+                      <th>港</th>
+                      <td><%= @agent.harbor%></td>
+                    </tr>
+                    <tr>
+                      <th>車での行き方</th>
+                      <td><%= @agent.how_to_go1 %></td>
+                    </tr>
+                    <th>公共機関での行き方</th>
+                      <td><%= @agent.how_to_go2 %></td>
+                    </tr>
+                    <tr>
+                      <th>定休日</th>
+                      <td><%= @agent.regular_holiday %></td>
+                    </tr>
+                    <tr>
+                      <th>氷</th>
+                      <td><%= @agent.ice %></td>
+                    </tr>
+                    <tr>
+                      <th>席順</th>
+                      <td><%=  @agent.sheet %></td>
+                    </tr>
+                    <tr>
+                      <th>ホームページ</th>
+                      <td><%= @agent.homepage %></td>
+                    </tr>
+                    <tr>
+                      <th>連絡先1</th>
+                      <td><%= @agent.tel1 %></td>
+                    </tr>
+                    <tr>
+                      <th>連絡先2</th>
+                      <td><%= @agent.tel2 %></td>
+                    </tr>
+                    <tr>
+                      <th>船宿よりご案内</th>
+                      <td><%= @agent.profile %></td>
+                    </tr>
+                  </table>
+                </div>
+                <br>
+                <% if agent_signed_in?%>
+                  <div class='profile-edit-button'>
+                    <%= link_to "プロフィールの編集", edit_agent_path, method: :get, class: 'profile-edit' %>
+                  </div>
+                <% end %>
+              </div>
   <!--ブログ投稿一覧-->
-  <div id="panel-2" class="panel">
-    <p class ='blog-list-tab'><%= @agent.agentname %>さんのブログ</p>
-    <!--一覧-->
-      <% @blogs.each do |blog| %>
-      <div class ='hogehoge'>
-        <li class='blog-list'>
-          <%= link_to blog_path(blog) do %>
-            <div class ='blog-content'>
-              <%= image_tag blog.image , class: "blog-img-thumb" %>
-              <p class ='blog-title-thumb'><%= blog.blog_title %></p>
-            </div>
-          <% end %>
-        </li>
-        </div>
-      <% end %>
-      <%#<%= paginate @blogs %>
-  </div>
-  
-  <!--釣果投稿一覧-->
-  <div id="panel-3" class="panel">
-          <p> ここは釣果投稿ユーザーが投稿した船宿をタグ付けした釣果が載ります</p>
-  </div>
-  <div id="panel-4" class="panel">
-          <p> ここは予約機能が表示されます。船宿側は予約枠の設定と予約の管理ができて釣果投稿側は予約枠の確認と予約ができます。</p>
-  </div>
-</div>
+              <div id="panel-2" class="panel">
+                <p class ='blog-list-tab'><%= @agent.agentname %>さんのブログ</p>
 
-    </div> <!-- row ends here -->
-  
-  </div> <!--container end here -->
-  
+                <% @blogs.each do |blog| %>
+                  <div class ='hogehoge'>
+                    <li class='blog-list'>
+                    <%= link_to blog_path(blog) do %>
+                      <div class ='blog-content'>
+                        <%= image_tag blog.image , class: "blog-img-thumb" %>
+                        <p class ='blog-title-thumb'><%= blog.blog_title %></p>
+                      </div>
+                    <% end %>
+                    </li>
+                  </div>
+                <% end %>
+                <%#<%= paginate @blogs %>
+              </div>
+  <!--釣果投稿一覧-->
+              <div id="panel-3" class="panel">
+                <p> ここは釣果投稿ユーザーが投稿した船宿をタグ付けした釣果が載ります</p>
+              </div>
+              <div id="panel-4" class="panel">
+                <p> ここは予約機能が表示されます。船宿側は予約枠の設定と予約の管理ができて釣果投稿側は予約枠の確認と予約ができます。</p>
+              </div>
+            </div>
+          </div> <!-- row ends here -->
+      </div> <!--container end here -->
 </div>

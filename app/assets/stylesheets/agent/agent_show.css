@@ -144,7 +144,12 @@ table td{
     list-style: none;
     float: left;
   }
-  .hogehoge {
+  .agent-profile-name-a {
+    margin-top: 10px;
+    border-bottom: 2px dotted #e47676;
+    font-size: 30px;
+    color: dimgrey;
+    text-align: center;
   }
 
   .blog-content {
