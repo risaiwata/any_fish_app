@@ -1,0 +1,27 @@
+<div class="agent-blog-show-content">
+  <div>
+    <%= image_tag @blog.image, class: "agent-blog-show-img" %>
+  </div>
+    <div class="blog-more">
+      <ul class="more_list">
+      <% if agent_signed_in? && current_agent.id == @blog.agent_id %>
+        <li>
+          <%= link_to '編集', edit_blog_path, method: :get, class:"more_list_list" %>
+        </li>
+        <li>
+          <%= link_to '削除', blog_path, method: :delete, class:"more_list_list" %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div>
+      <%= tag.span @blog.blog_title, class: 'agent-blog-show-title_title' %>
+    </div>
+    <div class="agent-blog-show-text">
+      <%= tag.span @blog.blog_text, class: 'agent-blog-show-text_text' %>
+    </div>
+    <div>
+    <%= link_to "by#{(@blog.agent.agentname)}", agent_path(@blog.agent), class:"blog-show-agentname" %>
+    </div>
+  </div>
+</div>

@@ -23,6 +23,18 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @blog = Blog.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    blog = Blog.find(params[:id])
+    blog.destroy
   end
 
   private

@@ -379,7 +379,9 @@ margin-left: 90px;
   text-align:center;
 }
 
+.main-bottom-left-content {
 
+}
 
 
 .slider {
@@ -443,11 +445,9 @@ margin:0 5px;
 }
 
 
-
-
-
-.main-bottom-left-content {
-
+.main-bottom-right-content {
+  background-color: #4478e3;
+  
 }
 
 /*メインコンテンツ*/

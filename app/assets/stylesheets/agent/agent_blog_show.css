@@ -1,0 +1,45 @@
+.agent-blog-show-content{
+  padding-top: 100px;
+  text-align: center;
+}
+
+.agent-blog-show-img {
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+}
+
+.more_list {
+  display: flex;
+  justify-content: center;
+}
+
+.more_list_list {
+  display: inline-block;
+  color: rgb(97, 202, 216);
+  font-size: 18px;
+  border: 1px solid rgb(97, 202, 216);
+  padding: 7px;
+  margin: 7px;
+}
+
+.agent-blog-show-title_title {
+  font-size: 30px;
+  margin: 10px;
+  max-width: 70%;
+  display: inline-block;
+  color: darkgray;
+} 
+
+.agent-blog-show-text_text {
+  display: inline-block;
+  max-width: 70%;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.blog-show-agentname {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 15px;
+}
