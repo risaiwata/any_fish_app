@@ -1,0 +1,11 @@
+<%= paginate @blogs, remote: true%>
+                  <% @blogs.each do |blog| %>
+                      <li class='blog-list'>
+                      <%= link_to blog_path(blog) do %>
+                        <div class ='blog-content'>
+                          <%= image_tag blog.image , class: "blog-img-thumb" %>
+                          <p class ='blog-title-thumb'><%= blog.blog_title %></p>
+                        </div>
+                      <% end %>
+                      </li>
+                  <% end %>

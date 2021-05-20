@@ -87,20 +87,22 @@
   <!--ブログ投稿一覧-->
               <div id="panel-2" class="panel">
                 <p class ='blog-list-tab'><%= @agent.agentname %>さんのブログ</p>
-
-                <% @blogs.each do |blog| %>
-                  <div class ='hogehoge'>
-                    <li class='blog-list'>
-                    <%= link_to blog_path(blog) do %>
-                      <div class ='blog-content'>
-                        <%= image_tag blog.image , class: "blog-img-thumb" %>
-                        <p class ='blog-title-thumb'><%= blog.blog_title %></p>
-                      </div>
-                    <% end %>
-                    </li>
-                  </div>
-                <% end %>
-                <%#<%= paginate @blogs %>
+                <div class= 'panel2-blog-tab'>
+                <div id="items">
+                  <%= paginate @blogs, remote: true%>
+                  <% @blogs.each do |blog| %>
+                      <li class='blog-list'>
+                      <%= link_to blog_path(blog) do %>
+                        <div class ='blog-content'>
+                          <%= image_tag blog.image , class: "blog-img-thumb" %>
+                          <p class ='blog-title-thumb'><%= blog.blog_title %></p>
+                        </div>
+                      <% end %>
+                      </li>
+                  <% end %>
+                </div>
+                  
+                </div>
               </div>
   <!--釣果投稿一覧-->
               <div id="panel-3" class="panel">

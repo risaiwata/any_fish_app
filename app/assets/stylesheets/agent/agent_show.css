@@ -143,6 +143,7 @@ table td{
   .blog-list {
     list-style: none;
     float: left;
+    margin: 5px;
   }
   .agent-profile-name-a {
     margin-top: 10px;
@@ -169,4 +170,13 @@ table td{
   .blog-img-thumb {
     width: 200px;
     height: 200px;
+  }
+
+  .agent-blog-pagenation {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 200px;
+
   }

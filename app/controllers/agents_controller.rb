@@ -1,7 +1,11 @@
 class AgentsController < ApplicationController
   def show
     @agent = Agent.find(params[:id])
-    @blogs = current_agent.blogs
+    @blogs = current_agent.blogs.page(params[:page]).per(4)
+    respond_to do |format|
+      format.html
+      format.js if request.xhr?
+    end
   end
 
   def edit
