@@ -13,8 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
- *= require bxslider
- *= require_tree .
- *= require_self
- */
