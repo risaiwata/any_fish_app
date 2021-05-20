@@ -1,4 +1,5 @@
-<%= paginate @blogs, remote: true%>
+
+                  <%= paginate @blogs, remote: true%>
                   <% @blogs.each do |blog| %>
                       <li class='blog-list'>
                       <%= link_to blog_path(blog) do %>
@@ -9,3 +10,4 @@
                       <% end %>
                       </li>
                   <% end %>
+                  

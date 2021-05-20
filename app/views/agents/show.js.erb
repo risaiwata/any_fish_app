@@ -1,1 +1,1 @@
-$("#items").html("<%= j(render :partial => 'blog', object: @blogs) %>");
+$("#items").html("<%= escape_javascript(render :partial => 'shared/blog', object: @blogs) %>");
