@@ -41,18 +41,21 @@
 </div>
 <div class = 'main-bottom-content'>
     <div class = 'main-bottom-left-content'>
-        <%= link_to "#" do %>
             <div class="previews">
                 <div class="slider">
-                <%= image_tag 'logo_transparent_正規.png', class:'sample' %>
-                <%= image_tag '釣果検索背景.jpeg', class:'sample' %>
-                <%= image_tag 'logo_transparent_正規.png', class:'sample' %>
-                <%= image_tag '釣果検索背景.jpeg', class:'sample' %>
-                <%= image_tag 'logo_transparent_正規.png', class:'sample' %>
-                <%= image_tag '釣果検索背景.jpeg', class:'sample' %>
+                <% @blogs.each do |blog| %>
+                        <li class='blog-list'>
+                        <%= link_to blog_path(blog) do %>
+                        <div class ='blog-content'>
+                            <%= image_tag blog.image , class: "blog-img-thumb" %>
+                            <p class ='blog-title-thumb'><%= blog.blog_title %></p>
+                        </div>
+                        <% end %>
+                        </li>
+                    <% end %>
                 </div>
             </div>
-        <% end %>
+            
     </div>
     <div class = 'main-bottom-right-content'>
     </div>

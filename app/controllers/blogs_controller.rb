@@ -14,11 +14,15 @@ class BlogsController < ApplicationController
   end
 
   def index
+    @blog = Blog.all
     @blogs = Blog.includes(:agent).page(params[:page]).per(4)
     respond_to do |format|
       format.html
       format.js if request.xhr?
     end
+  end
+
+  def show
   end
 
   private

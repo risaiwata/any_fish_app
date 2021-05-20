@@ -88,8 +88,10 @@
               <div id="panel-2" class="panel">
                 <p class ='blog-list-tab'><%= @agent.agentname %>さんのブログ</p>
                 <div class= 'panel2-blog-tab'>
-                <div id="items">
+                  <div id="items">
+                  <div class='blog-pagenation'>
                   <%= paginate @blogs, remote: true%>
+                  </div>
                   <% @blogs.each do |blog| %>
                       <li class='blog-list'>
                       <%= link_to blog_path(blog) do %>

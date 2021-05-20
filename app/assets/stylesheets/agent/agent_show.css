@@ -172,11 +172,6 @@ table td{
     height: 200px;
   }
 
-  .agent-blog-pagenation {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    flex-direction: column;
-    padding-top: 200px;
+  .pagination {
 
   }
