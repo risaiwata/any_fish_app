@@ -477,9 +477,133 @@ margin:0 5px;
 
 
 .main-bottom-right-content {
-  background-color: #4478e3;
-  height: 100vh;
   width: 30%;
+  text-align: center;
 }
+
+.tackle-search {
+  margin-top: 20px;
+  position: relative;
+}
+
+.tackle-search a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  font-size: 26px;
+  border: solid white 2px; 
+  padding: 24px;
+  color: white;
+  text-decoration: none;
+  
+  }
+
+.tackle-search a:hover{/*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
+  }
+
+.tackle-search img {
+  height: 200px;
+  width: 350px;
+  border-radius: 15px;
+}
+
+.fish-sreach {
+  margin-top: 20px;
+  position: relative;
+}
+
+.fish-sreach a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  font-size: 30px;
+  border: solid white 2px; 
+  padding: 24px;
+  color: white;
+  text-decoration: none;
+  
+  }
+
+.fish-sreach a:hover{/*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
+  }
+
+.fish-sreach img {
+  height: 200px;
+  width: 350px;
+  border-radius: 15px;
+}
+
+.tide-graph {
+  margin-top: 20px;
+  position: relative;
+}
+
+.tide-graph a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  font-size: 27px;
+  border: solid white 2px; 
+  padding: 24px;
+  color: white;
+  text-decoration: none;
+  
+  }
+
+.tide-graph a:hover{/*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
+  }
+
+.tide-graph img {
+  height: 200px;
+  width: 350px;
+  border-radius: 15px;
+}
+
+.fishing-guige {
+  margin-top: 20px;
+  position: relative;
+}
+
+.fishing-guige a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  font-size: 27px;
+  border: solid white 2px; 
+  padding: 24px;
+  color: white;
+  text-decoration: none;
+  
+  }
+
+.fishing-guige a:hover{/*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
+  }
+
+.fishing-guige img {
+  height: 200px;
+  width: 350px;
+  border-radius: 15px;
+}
+
 
 /*メインコンテンツ*/
