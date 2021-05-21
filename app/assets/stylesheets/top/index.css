@@ -465,6 +465,16 @@ margin:0 5px;
   background:#e47676;/*ドットボタンの現在地表示の色*/
 }
 
+.more-result {
+  width: 90%;
+  text-align: right;
+}
+
+.more-result-link {
+  color: lightskyblue;
+  font-size: 18px;
+}
+
 
 .main-bottom-right-content {
   background-color: #4478e3;

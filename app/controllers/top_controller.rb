@@ -2,11 +2,11 @@ class TopController < ApplicationController
 
   def index
     @agent = current_agent
-    @blogs = Blog.all.order(created_at: :desc)
+    @blogs = Blog.all.order(created_at: :desc).limit(5)
   end
 
   def show
-    @blog = Blog.find(params[:id])
+    @blog = Blog.all.order(created_at: :desc)
   end
   
 end
