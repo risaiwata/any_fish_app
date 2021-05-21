@@ -1,7 +1,7 @@
 class AgentsController < ApplicationController
 
   def index
-    @agents = Agent.all
+    @agents = Agent.all.order(created_at: :desc)
   end
   
   def show
