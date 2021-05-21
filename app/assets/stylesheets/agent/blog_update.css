@@ -1,0 +1,26 @@
+.success-content {
+  padding-top: 110px;
+  text-align: center;
+  height: 500px;
+}
+
+.success {
+  border: 1px solid rgb(176, 226, 235);
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.success-text {
+  color: darkgrey;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.success-btn {
+  background-color: #e47676;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -43,3 +43,14 @@
   margin-top: 20px;
   font-size: 15px;
 }
+
+.back-button {
+  background-color: #e47676;
+  color: azure;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.agent-blog-back {
+  margin: 10px;
+}

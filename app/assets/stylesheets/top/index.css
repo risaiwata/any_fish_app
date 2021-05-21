@@ -297,34 +297,37 @@ svg {
   display: flex;
   justify-content: space-between;
   padding-top: 100px;
-/*ヘッダー位置の調整*/
+  margin-bottom: 15px;
 }
 
 .shiping-agent-jmap-title {
   font-size: 40px;
   color: #bbb;
-  margin-left: 211px;
+ text-align: center;
   font-family: monospace;
 }
 
 .japan-map {
-  width: 880px;
-  height: 729px;
+}
+
+.main-top-left-content {
+  width: 70%;
 }
 
 .main-top-right-content {
-  margin-right: 30px;
+ width: 30%;
+ text-align: center;
 }
 
-
+.shipping-agent-sign-up {
+  margin-top: 15px;
+}
 
 .shipping-agent-sign-up-a {
   color: #fff;
   background-color: #e47676;
   font-size: 20px;
   padding: 14px;
-  margin-top: 20px;
-  margin-left: 50px;
   border-radius: 15px;
 }
 
@@ -369,23 +372,41 @@ margin-left: 90px;
 
 
 
-.admin-notice p{
+.admin-notice {
   font-size: 24px;
   text-align:center;
-  border-bottom: solid 1px #e47676;
 }
 
-.admin-notice ul{
-  text-align:center;
+.notice-title {
+  color: darkgrey;
+  border-bottom: 1px solid #e47676;
+}
+
+
+.admin-notice-list {
+  font-size: 20px;
+}
+
+.main-bottom-content {
+  display: flex;
 }
 
 .main-bottom-left-content {
+  /*background-color: cadetblue;*/
+  width: 70%;
+}
 
+.main-result-slider-title {
+  color: lightskyblue;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 5px;
 }
 
 
 .slider {
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -447,7 +468,8 @@ margin:0 5px;
 
 .main-bottom-right-content {
   background-color: #4478e3;
-  
+  height: 100vh;
+  width: 30%;
 }
 
 /*メインコンテンツ*/

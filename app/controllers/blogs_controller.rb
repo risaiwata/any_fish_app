@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
 
   def index
     @blog = Blog.all
-    @blogs = Blog.includes(:agent).page(params[:page]).per(4)
+    @blogs = Blog.includes(:agent).page(params[:page]).per(4).order(created_at: :desc)
     respond_to do |format|
       format.html
       format.js if request.xhr?
@@ -27,9 +27,12 @@ class BlogsController < ApplicationController
   end
 
   def edit
+    @blog = Blog.find(params[:id])
   end
 
   def update
+    blog = Blog.find(params[:id])
+    blog.update(blog_params)
   end
 
   def destroy

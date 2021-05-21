@@ -1,7 +1,7 @@
 class AgentsController < ApplicationController
   def show
     @agent = Agent.find(params[:id])
-    @blogs = Blog.page(params[:page]).per(4)
+    @blogs = @agent.blogs.page(params[:page]).per(4).order(created_at: :desc)
     respond_to do |format|
       format.html
       format.js if request.xhr?

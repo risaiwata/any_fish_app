@@ -1,0 +1,22 @@
+<div class="blog-contact">
+  <div class="blog-container">
+    <div class="blog-head">
+      <h2 class="blog-h2">ブログを編集する</h2>
+    </div>
+    <div class= 'blog-body'>
+    <%= form_with model:@blog, local: true do |f| %>
+    <div>
+      <%= f.file_field :image, class:"blog-images" %>
+      </div>
+      <div>
+      <%= f.text_field :blog_title, placeholder: "タイトル", class: 'blog-input' %>
+      </div>
+      <div>
+      <%= f.text_area :blog_text, placeholder: "ブログ内容", class: 'blog-textarea' %>
+      </div>
+    <div class="blog-message">投稿完了！</div>
+    <%= f.submit "投稿", class:'blog-button' %>
+    </div>
+  <% end %>
+  </div>
+</div>

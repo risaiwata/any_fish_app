@@ -3,13 +3,18 @@
       <p class ='agent-profile-name-a'><%= @agent.agentname %> </p>
     </div>
     <div class ='icon_image_content'>
-      <%= image_tag @agent.image.url , class: "icon_image" %>  
+    <!--アイコンを設定していない場合の条件分岐-->
+    <% if @agent.image.url.nil? %>
+      <%= image_tag 'no_image.png', class: "icon_image" %>
+      <% else %> 
+      <%= image_tag @agent.image.url , class: "icon_image" %> 
+      <% end %>
     </div>
       <div class="agent-show-container">
           <div class="container-fluid">
             <div class="row">
               <div class="tab-panels col-xs-12">
-<!-- creating tabs here -->
+<!-- タブ -->
               <ul class="tabs">
                 <li rel="panel-1" class="active"> 基本情報</li>
                 <li rel="panel-2"> ブログ</li>
@@ -78,7 +83,7 @@
                   </table>
                 </div>
                 <br>
-                <% if agent_signed_in?%>
+                <% if agent_signed_in? && current_agent.id == @agentid %>
                   <div class='profile-edit-button'>
                     <%= link_to "プロフィールの編集", edit_agent_path, method: :get, class: 'profile-edit' %>
                   </div>
@@ -101,6 +106,6 @@
                 <p> ここは予約機能が表示されます。船宿側は予約枠の設定と予約の管理ができて釣果投稿側は予約枠の確認と予約ができます。</p>
               </div>
             </div>
-          </div> <!-- row ends here -->
-      </div> <!--container end here -->
+          </div> 
+      </div> 
 </div>

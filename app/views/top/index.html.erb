@@ -9,6 +9,7 @@
         </div>
     </div>
     <div class = 'main-top-right-content'>
+        <%= image_tag @agent.image.url , class: "icon_image" %> 
         <% if angler_signed_in? %>
         <!--釣果登録ユーザーは表示させない-->
         <% elsif agent_signed_in? %>
@@ -31,16 +32,21 @@
             <a href="#"><i class="" ></i> 釣果検索</a>
         </div>
         <div class ='admin-notice'>
-        <p>お知らせ</p>
-        <ul>
-        <li>これはお知らせです①</li>
-        <li>これはお知らせです②</li>
-        </ul>
+            <div class ='notice-title'> 
+                お知らせ
+            </div>
+            <ul class= 'admin-notice-list'>
+                <li>これはお知らせです①</li>
+                <li>これはお知らせです②</li>
+            </ul>
         </div>
     </div>
 </div>
 <div class = 'main-bottom-content'>
     <div class = 'main-bottom-left-content'>
+        <div class = 'main-result-slider-title'>
+        最新釣果
+        </div>
             <div class="previews">
                 <div class="slider">
                 <% @blogs.each do |blog| %>

@@ -23,5 +23,8 @@
     <div>
       <%= link_to "by#{(@blog.agent.agentname)}", agent_path(@blog.agent), class:"blog-show-agentname" %>
     </div>
+    <div class= 'agent-blog-back'>
+    <%= link_to '戻る' , :back , class:'back-button' %>
+    </div>
   </div>
 </div>
