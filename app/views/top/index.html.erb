@@ -7,11 +7,10 @@
         <div class= 'japan-map'>
         <%= render 'shared/japan_map' %>
         </div>
+        <%= link_to '仮東京', '#'%>
     </div>
     <div class = 'main-top-right-content'>
-        <% if current_agent.image.url.nil? %>
-            <%= image_tag 'no_image.png', class: "icon_image" %>
-        <% else %> 
+        <% if  agent_signed_in? %>
             <%= image_tag @agent.image.url , class: "icon_image" %> 
         <% end %>
         <% if angler_signed_in? %>
@@ -111,19 +110,19 @@
     </div>
     <div class = 'main-bottom-right-content'>
         <div class = 'tide-graph'>
-            <%= image_tag 'タイドグラフ.png'%>
+             <%= image_tag 'tide.jpeg'%>
             <a href="#"><i class="" ></i> タイドグラフ</a>
         </div>
         <div class='tackle-search'>
-            <%= image_tag 'タックル検索.png'%>
+            <%= image_tag 'tackle.jpeg'%>
             <a href="#"><i class="" ></i> タックル検索</a>
         </div>
         <div class='fish-sreach'>
-            <%= image_tag '魚図鑑.png'%>
+            <%= image_tag 'fish.jpeg'%>
             <a href="#"><i class="" ></i> 魚図鑑</a>
         </div>
         <div class ='fishing-guige'>
-            <%= image_tag '釣りガイド1.png'%>
+            <%= image_tag 'fishingguide.jpeg'%>
             <a href="#"><i class="" ></i> 釣りガイド</a>
         </div>
     </div>

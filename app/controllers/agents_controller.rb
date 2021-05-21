@@ -1,4 +1,9 @@
 class AgentsController < ApplicationController
+
+  def index
+    @agents = Agent.all
+  end
+  
   def show
     @agent = Agent.find(params[:id])
     @blogs = @agent.blogs.page(params[:page]).per(4).order(created_at: :desc)

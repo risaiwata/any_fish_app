@@ -12,7 +12,9 @@ Rails.application.routes.draw do
       registrations: 'agents/registrations'
     }
     root  'top#index'
-    resources :agents, only: [:show,:edit,:update]
+    resources :agents, only: [:show,:edit,:update,:index]
     resources :blogs, only: [:new, :create,:index, :show, :edit, :update, :destroy]
+
+    #get  'agents/:pref_name/pref_name',  to: 'users#pref_name_index'
 
 end

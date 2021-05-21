@@ -1,0 +1,16 @@
+
+<div class="agent-index">
+  <% @agents.each do |a| %>
+  <%= link_to agent_path(a) do %>
+    <div class='agent-index-content'>
+      <%= image_tag a.image.url, class: "icon_image" %>
+      <div class ='agent-index-name'>
+        <%= a.agentname %>
+      </div>
+      <div class = 'agent-index-prefecture'>
+        <%= Agent.prefectures.key(a.prefecture_id) %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

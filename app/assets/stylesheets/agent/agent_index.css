@@ -1,0 +1,17 @@
+.agent-index {
+  padding-top: 100px;
+  display: flex;
+}
+
+.agent-index-content {
+  text-align: center;
+  margin: 10px;
+}
+
+.agent-index-name {
+  font-size: 20px;
+}
+
+.agent-index-prefecture {
+  font-size: 20px;
+}

@@ -1,26 +1,13 @@
-/* Fonts */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
 
-/* fontawesome */
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
-
-
-.agent-form-wrapper {
-
+.user-form-wrapper {
+  width: 50%;
   padding-top: 80px;
-  
+  margin: auto;
 }
 
-.form-wrap {
-  background-color: white;
-  padding-bottom: 70px;
-  width: 500px;
-  margin-left: 450px;
+.user-wrapper {
+  width: 100%;
 }
-
 .form-header {
   width: 100%;
   height: 120px;
@@ -58,7 +45,7 @@
 }
 
 .input-default {
-  width: 100%;
+  width: 90%;
   margin-top: 5px;
   height: 28px;
   padding: 10px 16px 8px;
@@ -163,9 +150,8 @@
 }
 
 .register-info {
-  margin: 30px 180px 0 0;
   color: #0099e8;
-  text-align: right;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -182,8 +168,7 @@
 }
 
 .angular-footer {
-  margin-left: 40px;
-  padding-left: 110px;
+  text-align: center;
 }
 
 .hoge {

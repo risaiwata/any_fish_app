@@ -5,8 +5,5 @@ class TopController < ApplicationController
     @blogs = Blog.all.order(created_at: :desc).limit(5)
   end
 
-  def show
-    @blog = Blog.all.order(created_at: :desc)
-  end
   
 end

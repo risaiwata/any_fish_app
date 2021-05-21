@@ -22,6 +22,7 @@ ul,li {
   height: 72px;
   width: 100vw;
   display: flex;
+  justify-content: space-around;
   position:fixed;
   /*ヘッダーの固定*/
   z-index: 5;
@@ -58,7 +59,10 @@ ul,li {
   border-radius: 10px;
   padding: 14px;
   margin-right: 5px;
+}
 
+.result-button a:hover {
+  background-color: rgba(255, 255, 255, 0.39);
 }
 
 .guide-button a{
@@ -71,12 +75,20 @@ ul,li {
 
 }
 
+.guide-button a:hover {
+  background-color: rgba(255, 255, 255, 0.39);
+}
+
 .ranking-button a {
   color: azure;
   text-decoration: none;
   border: 1px solid azure;
   border-radius: 10px;
   padding: 14px;
+}
+
+.ranking-button a:hover {
+  background-color: rgba(255, 255, 255, 0.39);
 }
 
 .header-search {
@@ -127,6 +139,10 @@ ul,li {
   margin-right: 5px;
 }
 
+.login a:hover {
+  background-color: rgba(255, 255, 255, 0.39);
+}
+
 .sign-up a{
   color: azure;
   text-decoration: none;
@@ -134,6 +150,10 @@ ul,li {
   border-radius: 10px;
   padding: 14px;
   margin-right: 5px;
+}
+
+.sign-up a:hover {
+  background-color: rgba(255, 255, 255, 0.39);
 }
 
 .username p{
@@ -152,6 +172,10 @@ ul,li {
   border-radius: 10px;
   padding: 14px;
   margin-right: 5px;
+}
+
+.tweet-button a:hover {
+  background-color: rgba(255, 255, 255, 0.39);
 }
 /*ヘッダー*/
 
@@ -331,6 +355,7 @@ svg {
   border-radius: 15px;
 }
 
+
 .shipping-agent-sign-in {
 font-size: 20px;
 margin-top: 20px;
@@ -392,7 +417,7 @@ margin-left: 90px;
 }
 
 .main-bottom-left-content {
-  background-color: cadetblue;
+  /*background-color: cadetblue;*/
   width: 70%;
 }
 
