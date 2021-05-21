@@ -9,7 +9,11 @@
         </div>
     </div>
     <div class = 'main-top-right-content'>
-        <%= image_tag @agent.image.url , class: "icon_image" %> 
+        <% if current_agent.image.url.nil? %>
+            <%= image_tag 'no_image.png', class: "icon_image" %>
+        <% else %> 
+            <%= image_tag @agent.image.url , class: "icon_image" %> 
+        <% end %>
         <% if angler_signed_in? %>
         <!--釣果登録ユーザーは表示させない-->
         <% elsif agent_signed_in? %>
