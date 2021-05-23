@@ -16,6 +16,9 @@
     </div>
     <div>
       <%= tag.span @blog.blog_title, class: 'agent-blog-show-title_title' %>
+      </div>
+      <div>
+      <%= tag.span @blog.created_at.strftime('%Y/%m/%d'), class: 'agent-blog-show-text_text' %>
     </div>
     <div class="agent-blog-show-text">
       <%= tag.span @blog.blog_text, class: 'agent-blog-show-text_text' %>

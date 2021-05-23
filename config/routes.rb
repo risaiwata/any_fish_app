@@ -15,6 +15,6 @@ Rails.application.routes.draw do
     resources :agents, only: [:show,:edit,:update,:index]
     resources :blogs, only: [:new, :create,:index, :show, :edit, :update, :destroy]
 
-    #get  'agents/:pref_name/pref_name',  to: 'users#pref_name_index'
+    get  'agents/prefecture_id/tokyo',  to: 'agents#agent_pref_index'
 
 end

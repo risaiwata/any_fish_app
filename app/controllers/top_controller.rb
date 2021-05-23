@@ -4,6 +4,5 @@ class TopController < ApplicationController
     @agent = current_agent
     @blogs = Blog.all.order(created_at: :desc).limit(5)
   end
-
   
 end

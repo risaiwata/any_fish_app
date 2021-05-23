@@ -28,6 +28,12 @@ class AgentsController < ApplicationController
     end
   end
 
+  def agent_pref_index
+    @tokyo = Agent.where(prefecture_id: 13)
+  end
+    
+    
+
   private
 
 def agent_params

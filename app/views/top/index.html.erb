@@ -7,7 +7,7 @@
         <div class= 'japan-map'>
         <%= render 'shared/japan_map' %>
         </div>
-        <%= link_to '仮東京', '#'%>
+        <%#<%= link_to '仮東京', agents_prefecture_id_tokyo_path %>
     </div>
     <div class = 'main-top-right-content'>
         <% if  agent_signed_in? %>
@@ -92,16 +92,12 @@
             </div>
             <div class="previews">
                 <div class="slider">
-                <% @blogs.each do |blog| %>
-                        <li class='blog-list'>
-                        <%= link_to blog_path(blog) do %>
-                        <div class ='blog-content'>
-                            <%= image_tag blog.image , class: "blog-img-thumb" %>
-                            <p class ='blog-title-thumb'><%= blog.blog_title %></p>
-                        </div>
-                        <% end %>
-                        </li>
-                    <% end %>
+                <%= image_tag "sakana_ao.png", class: "blog-img-thumb" %>
+                <%= image_tag "sakana_ao.png", class: "blog-img-thumb" %>
+                <%= image_tag "sakana_ao.png", class: "blog-img-thumb" %>
+                <%= image_tag "sakana_ao.png", class: "blog-img-thumb" %>
+                <%= image_tag "sakana_ao.png", class: "blog-img-thumb" %>
+                <%= image_tag "sakana_ao.png", class: "blog-img-thumb" %>
                 </div>
             </div>
             <div class='more-result'>
