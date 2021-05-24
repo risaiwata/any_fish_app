@@ -37,7 +37,7 @@ class AgentsController < ApplicationController
   private
 
 def agent_params
-  params.require(:agent).permit(:agentname, :agentname_kana, :first_name, :last_name, :first_name_kana, :last_name_kana, :prefecture_id, :address, :harbor,:how_to_go1, :how_to_go2, :tel1, :tel2, :homepage, :regular_holiday, :ice, :target, :ship_type_id, :fishing_type_id, :profile, :sheet)
+  params.require(:agent).permit(:agentname, :agentname_kana, :first_name, :last_name, :first_name_kana, :last_name_kana, :prefecture_id, :address, :harbor,:how_to_go1, :how_to_go2, :tel1, :tel2, :homepage, :regular_holiday, :ice, :target, :ship_type_id, :fishing_type_id, :profile, :sheet, :image)
 end
 
 end
