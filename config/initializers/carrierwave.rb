@@ -9,6 +9,5 @@ unless Rails.env.development? || Rails.env.test?
 
     config.fog_directory  = 'anyfish0313'
     config.cache_storage = :fog
-    config.fog_provider = 'fog/aws'
   end
 end
