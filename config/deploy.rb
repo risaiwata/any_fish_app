@@ -33,4 +33,4 @@ namespace :deploy do
 end
 
   # deploy先のディレクトリ。 
-set :deploy_to, '/var/www/anyfish'
+set :deploy_to, '/var/www/any_fish_app'
