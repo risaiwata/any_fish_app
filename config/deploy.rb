@@ -30,7 +30,7 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+end
 
   # deploy先のディレクトリ。 
 set :deploy_to, '/var/www/anyfish'
-end
