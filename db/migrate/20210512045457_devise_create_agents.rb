@@ -27,7 +27,7 @@ class DeviseCreateAgents < ActiveRecord::Migration[6.0]
       t.integer :fishing_type_id,    null: false
       t.text   :profile 
       t.text   :sheet,               null: false 
-      t.string :image
+
 
 
       ## Recoverable
