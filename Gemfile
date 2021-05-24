@@ -72,3 +72,5 @@ gem 'carrierwave'
 
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+
+gem "aws-sdk-s3", require: false
