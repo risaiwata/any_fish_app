@@ -2,7 +2,7 @@
 lock '3.16.0'
 
 # Capistranoのログの表示に利用する
-set :application, 'anyfishapp'
+set :application, 'any_fish_app'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:risaiwata/any_fish_app.git'
@@ -30,4 +30,7 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+
+  # deploy先のディレクトリ。 
+set :deploy_to, '/var/www/anyfish'
 end
