@@ -83,7 +83,7 @@
                   </table>
                 </div>
                 <br>
-                <% if agent_signed_in? && current_agent.id == @agentid %>
+                <% if agent_signed_in? && current_agent.id == @agent.id %>
                   <div class='profile-edit-button'>
                     <%= link_to "プロフィールの編集", edit_agent_path, method: :get, class: 'profile-edit' %>
                   </div>
