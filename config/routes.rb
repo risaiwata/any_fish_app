@@ -13,7 +13,8 @@ Rails.application.routes.draw do
     }
     root  'top#index'
     resources :agents, only: [:show,:edit,:update,:index]
-    resources :blogs, only: [:new, :create,:index, :show, :edit, :update, :destroy]
+    resources :blogs
+    resources :posts, only: [:new, :create, :index]
 
     get  'agents/prefecture_id/tokyo',  to: 'agents#agent_pref_index'
 

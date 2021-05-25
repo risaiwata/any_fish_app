@@ -1,0 +1,63 @@
+
+<div class="blog-contact">
+  <div class="blog-container">
+    <div class="blog-head">
+      <h2 class="blog-h2"> 釣果を投稿する</h2>
+    </div>
+    <div class= 'blog-body'>
+    <%= form_with model:@post, local: true do |f| %>
+    <div>
+      <%= f.file_field :image, class:"blog-images" %>
+      </div>
+      <div>
+      <%= f.text_field :post_title, placeholder: "タイトル", class: 'blog-input' %>
+      </div>
+      <div>
+      <%= f.text_area :result_text, placeholder: "釣果内容", class: 'blog-textarea' %>
+      </div>
+      <div class="form-group">
+          <div class='post-text-wrap'>
+            <label class="form-text">釣れた日</label>
+          </div>
+          <div class='input-date-wrap'>
+            <%= raw sprintf(
+                  f.date_select(
+                    :result_date,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 2020,
+                    end_year: (Time.now.year + 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+          </div>
+      <div class= 'post-input-wrap'>
+      <%= f.text_field :fish, placeholder: "魚種", class: 'post-input' %>
+      <%= f.text_field :size, placeholder: "サイズ", class: 'post-input' %>
+      
+      </div>
+      <div class= 'post-input-wrap'>
+      <%= f.text_field :weight, placeholder: "重さ", class: 'post-input' %>
+      <%= f.text_field :count, placeholder: "匹数", class: 'post-input' %>
+      
+      </div>
+      <div class= 'post-input-wrap'>
+      <%= f.text_field :reel, placeholder: "リール", class: 'post-input' %>
+      <%= f.text_field :lure, placeholder: "ルアー", class: 'post-input' %>
+      
+      </div>
+      <div class= 'post-input-wrap'>
+      
+      <%= f.text_field :rod, placeholder: "ロッド（竿）", class: 'post-input' %>
+      <%= f.text_field :weather, placeholder: "天気", class: 'post-input' %>
+      </div>
+      <div class = 'post-input-wrap'>
+      <%= f.text_field :tag_list, value: @post.tag_list.join(','),placeholder:'カンマ区切りで複数のタグが付けできます', class: "post-input-tag" %>
+      </div>
+    <div class="blog-message">投稿完了！</div>
+    <%= f.submit "投稿", class:'post-button' %>
+    </div>
+  <% end %>
+  </div>
+</div>

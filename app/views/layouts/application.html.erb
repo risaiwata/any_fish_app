@@ -57,7 +57,7 @@
             <p>こんにちは<%= link_to current_angler.nickname, "#", class: "username" %>さん</p>
           </div>
           <div class = 'tweet-button'>
-            <a href="#">釣果を投稿する</a>
+            <a href="/posts/new">釣果を投稿する</a>
           </div>
           <div class = 'tweet-button'>
             <%= link_to 'Sign out', destroy_angler_session_path, method: :delete, class: "logout" %>

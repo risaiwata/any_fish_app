@@ -9,5 +9,7 @@ unless Rails.env.development? || Rails.env.test?
 
     config.fog_directory  = 'anyfish0313'
     config.cache_storage = :fog
+    config.fog_public    = true
+
   end
 end
