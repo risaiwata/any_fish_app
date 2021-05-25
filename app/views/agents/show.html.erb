@@ -4,10 +4,10 @@
     </div>
     <div class ='icon_image_content'>
     <!--アイコンを設定していない場合の条件分岐-->
-    <% if @agent.image.url.nil? %>
-      <%= image_tag 'no_image.png', class: "icon_image" %>
+    <% if @agent.image.url.present? %>
+    <%= image_tag @agent.image.url , class: "icon_image" %> 
       <% else %> 
-      <%= image_tag @agent.image.url , class: "icon_image" %> 
+      <%= image_tag 'no_image.png', class: "icon_image" %>
       <% end %>
     </div>
       <div class="agent-show-container">
