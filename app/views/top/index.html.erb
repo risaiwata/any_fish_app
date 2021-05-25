@@ -11,7 +11,11 @@
     </div>
     <div class = 'main-top-right-content'>
         <% if  agent_signed_in? %>
-            <%#<%= image_tag @agent.image.url , class: "icon_image" %> 
+            <% if @agent.image?%>
+            <%= image_tag @agent.image.url , class: "icon_image" %> 
+            <% else %>
+            <%= image_tag 'no_image.png', class: "icon_image" %>
+            <% end %>
         <% end %>
         <% if angler_signed_in? %>
         <!--釣果登録ユーザーは表示させない-->
