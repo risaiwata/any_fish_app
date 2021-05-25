@@ -1,0 +1,23 @@
+.angler-post-show-text_text {
+  color: black;
+  font-size: 19px;
+}
+
+.angler-post-date {
+  background-color: #5b9fff;
+  padding: 10px;
+  border-radius: 10px;
+  color: azure;
+
+}
+
+.angler-post-show-wrap {
+  margin: 15px;
+}
+
+.angler-show-tag{
+  list-style: none;
+  display: inline;
+  color: black;
+  font-size: 19px;
+}

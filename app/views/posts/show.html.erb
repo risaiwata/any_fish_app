@@ -1,0 +1,65 @@
+<div class="agent-blog-show-content">
+  <div>
+    <%= image_tag @post.image, class: "agent-blog-show-img" %>
+  </div>
+    <div class="blog-more">
+      <ul class="more_list">
+      <% if angler_signed_in? && current_angler.id == @post.angler_id %>
+        <li>
+          <%= link_to '編集', edit_blog_path, method: :get, class:"more_list_list" %>
+        </li>
+        <li>
+          <%= link_to '削除', blog_path, method: :delete, class:"more_list_list" %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class='angler-post-show-wrap'>
+      <%= tag.span @post.post_title, class: 'agent-blog-show-title_title' %>
+      </div>
+      <div class='angler-post-show-wrap'>
+      <%= tag.span '釣行日', class: 'angler-post-date'%>
+      <%= tag.span @post.result_date, class: 'angler-post-show-text_text' %>
+    </div>
+      <div class='angler-post-show-wrap'>
+      <%= tag.span '魚種', class: 'angler-post-date'%>
+      <%= tag.span @post.fish, class: 'angler-post-show-text_text' %>
+      <%= tag.span 'サイズ', class: 'angler-post-date'%>
+      <%= tag.span @post.size, class: 'angler-post-show-text_text' %>
+      <%= tag.span '重さ', class: 'angler-post-date'%>
+      <%= tag.span @post.weight, class: 'angler-post-show-text_text' %>
+      <%= tag.span '釣れた数', class: 'angler-post-date'%>
+      <%= tag.span @post.count, class: 'angler-post-show-text_text' %>
+      </div>
+      <div class='angler-post-show-wrap'>
+      <%= tag.span 'ルアー', class: 'angler-post-date'%>
+      <%= tag.span @post.lure, class: 'angler-post-show-text_text' %>
+      <%= tag.span 'リール', class: 'angler-post-date'%>
+      <%= tag.span @post.reel, class: 'angler-post-show-text_text' %>
+      <%= tag.span 'ロッド(竿)', class: 'angler-post-date'%>
+      <%= tag.span @post.rod, class: 'angler-post-show-text_text' %>
+      <%= tag.span '天気', class: 'angler-post-date'%>
+      <%= tag.span @post.weather, class: 'angler-post-show-text_text' %>
+      </div>
+      <div class='angler-post-show-wrap'>
+      
+      <%= tag.span 'タグ', class: 'angler-post-date'%>
+      <% @post.tag_list.each do |tag| %>
+        <li class='angler-show-tag'><%= tag %></li>
+      <% end %>
+      <div class="angler-post-show-wrap">
+        <div class='angler-post-text'>
+          <%= tag.span '釣行記', class: 'angler-post-date'%>
+        </div>
+        <br>
+          <%= tag.span @post.result_text, class: 'angler-post-show-text_text' %>
+      </div>
+      <%= tag.span '投稿者', class: 'angler-post-date'%>
+      <%=tag.span @post.angler.nickname, class: 'angler-post-show-text_text' %>
+      </div>
+
+    <div class= 'agent-blog-back'>
+    <%= link_to '戻る' , :back , class:'back-button' %>
+    </div>
+  </div>
+</div>
