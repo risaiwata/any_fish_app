@@ -79,7 +79,12 @@
                         <li class='blog-list'>
                         <%= link_to blog_path(blog) do %>
                         <div class ='blog-content'>
-                            <%= image_tag blog.image , class: "blog-img-thumb" %>
+                            <% if blog.image.present? %>
+                                <%= image_tag blog.image , class: "blog-img-thumb" %>
+                            <%else %>
+                                <%= image_tag 'no_image.png', class:"blog-img-thumb" %>
+                            <%end%>
+                            
                             <p class ='blog-title-thumb'><%= blog.blog_title %></p>
                         </div>
                         <% end %>

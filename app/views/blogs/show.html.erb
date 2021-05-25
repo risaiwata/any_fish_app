@@ -1,6 +1,10 @@
 <div class="agent-blog-show-content">
   <div>
+  <% if @blog.image.present? %>
     <%= image_tag @blog.image, class: "agent-blog-show-img" %>
+  <%else %>
+    <%= image_tag 'no_image.png', class:"blog-img-thumb" %>
+  <%end%>
   </div>
     <div class="blog-more">
       <ul class="more_list">
