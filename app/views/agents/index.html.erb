@@ -3,7 +3,11 @@
   <% @agents.each do |a| %>
   <%= link_to agent_path(a) do %>
     <div class='agent-index-content'>
+    <% if @agent.image? %>
       <%= image_tag a.image.url, class: "icon_image" %>
+      <% else %>
+    <%= image_tag 'no_image.png', class: "icon_image" %>
+    <% end %>
       <div class ='agent-index-name'>
         <%= a.agentname %>
       </div>

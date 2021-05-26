@@ -1,11 +1,14 @@
 <h1 class ='agent-index-tokyo'>東京都の船宿一覧</h1>
 
-
 <div class="agent-index">
   <% @tokyo.each do |a| %>
   <%= link_to agent_path(a) do %>
     <div class='agent-index-content'>
+    <% if a.image? %>
       <%= image_tag a.image.url, class: "icon_image" %>
+    <% else %>
+      <%= image_tag 'no_image.png', class: "icon_image" %>
+    <% end %>
       <div class ='agent-index-name'>
         <%= a.agentname %>
       </div>
