@@ -19,6 +19,9 @@
         <% end %>
         <% if angler_signed_in? %>
         <!--釣果登録ユーザーは表示させない-->
+        <div class = 'shipping-agent-sign-up'>
+                <%= link_to '釣果を投稿する＞', new_post_path, class: "shipping-agent-sign-up-a" %>
+            </div>
         <% elsif agent_signed_in? %>
         <div class = 'shipping-agent-sign-up'>
                 <%= link_to '船宿ブログ投稿はこちら', new_blog_path, class: "shipping-agent-sign-up-a" %>
@@ -71,7 +74,7 @@
                 </div>
             </div>
             <div class='more-result'>
-            <%= link_to 'もっとみる', '#' , class: 'more-result-link'%>
+            <%= link_to 'もっとみる', posts_path , class: 'more-result-link'%>
             </div>
             <div class = 'main-result-slider-title'>
             最新ブログ
@@ -97,7 +100,7 @@
                 </div>
             </div>
             <div class='more-result'>
-            <%= link_to 'もっとみる', '#' , class: 'more-result-link'%>
+            <%= link_to 'もっとみる', blogs_path , class: 'more-result-link'%>
             </div>
             <div class = 'main-result-slider-title'>
             Any fish 通信

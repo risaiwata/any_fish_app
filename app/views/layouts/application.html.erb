@@ -30,7 +30,7 @@
             <a href="#">初心者ガイド</a>
           </div>
           <div class = 'result-button'>
-            <a href="#">釣果一覧</a>
+            <a href="/posts">釣果一覧</a>
           </div>
           <div class = 'result-button'>
             <%= link_to '船宿一覧', agents_path(@agents) %>
@@ -55,9 +55,6 @@
           <% if angler_signed_in? %>
           <div class = 'username'>
             <p>こんにちは<%= link_to current_angler.nickname, "#", class: "username" %>さん</p>
-          </div>
-          <div class = 'tweet-button'>
-            <a href="/posts/new">釣果を投稿する</a>
           </div>
           <div class = 'tweet-button'>
             <%= link_to 'Sign out', destroy_angler_session_path, method: :delete, class: "logout" %>

@@ -1,0 +1,12 @@
+<div class ='agent-index'>
+<% @posts.each do |post| %>
+  <li class='blog-list'>
+    <%= link_to post_path(post) do %>
+      <div class ='blog-content'>
+        <%= image_tag post.image , class: "blog-img-thumb" %>
+        <p class ='blog-title-thumb'><%= post.post_title %></p>
+      </div>
+    <% end %>
+  </li>
+<% end %>
+</div>

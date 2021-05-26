@@ -6,10 +6,10 @@
       <ul class="more_list">
       <% if angler_signed_in? && current_angler.id == @post.angler_id %>
         <li>
-          <%= link_to '編集', edit_blog_path, method: :get, class:"more_list_list" %>
+          <%= link_to '編集', edit_post_path, method: :get, class:"more_list_list" %>
         </li>
         <li>
-          <%= link_to '削除', blog_path, method: :delete, class:"more_list_list" %>
+          <%= link_to '削除', post_path, method: :delete, class:"more_list_list" %>
         </li>
         <% end %>
       </ul>

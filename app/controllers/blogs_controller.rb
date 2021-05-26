@@ -31,13 +31,18 @@ class BlogsController < ApplicationController
   end
 
   def update
-    blog = Blog.find(params[:id])
-    blog.update(blog_params)
+    if blog = Blog.find(params[:id])
+      blog.update(blog_params)
+      redirect_to blog_path(blog)
+    else
+      render :edit
+    end
   end
 
   def destroy
     blog = Blog.find(params[:id])
     blog.destroy
+    redirect_to root_path
   end
 
   private
