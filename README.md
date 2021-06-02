@@ -4,11 +4,17 @@
 
 # リポジトリ名
 Any fish
+
 釣果投稿、船宿検索アプリです
 
 ## Dependency
-使用言語とバージョン、必要なライブラリとそのバージョンを書く
-Pythonならrequirements.txtを用意するのも良い
+HTML
+CSS
+JavaScript
+JQuery
+Ruby on rails 
+MySQL
+
 
 ## Setup
 セットアップ方法を書く。用意するハードウェアとソフトウェアをセットアップするためのコマンドを記載する
