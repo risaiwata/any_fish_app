@@ -23,15 +23,21 @@ http://35.74.112.243
 上記URLにアクセスし、テストユーザーでログインしてください
 
 船宿側デモユーザー①
+
 agenttest@test.com
+
 agent1994
 
 船宿側デモユーザー②
+
 agentagent@test.com
+
 agent0313
 
 釣果投稿ユーザー
+
 angler@test.com
+
 angler3737
 
 
