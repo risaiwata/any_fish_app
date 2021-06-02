@@ -17,20 +17,34 @@ MySQL
 
 
 ## Setup
+
 http://35.74.112.243
-セットアップ方法を書く。用意するハードウェアとソフトウェアをセットアップするためのコマンドを記載する
+
+上記URLにアクセスし、テストユーザーでログインしてください
+
+船宿側デモユーザー①
+agenttest@test.com
+agent1994
+船宿側デモユーザー②
+agentagent@test.com
+agent0313
+
+釣果投稿ユーザー
+angler@test.com
+angler3737
+
 
 ## Usage
-使い方。なるべく具体的に書く。サンプルも書く
+使い方。（執筆中です）
 
 ## License
 This software is released under the MIT License, see LICENSE.
 
 ## Authors
-作者を明示する。特に、他者が作成したコードを利用する場合は、そのコードのライセンスに従った上で、リポジトリのそれぞれのコードのオリジナルの作者が誰か分かるように明示する（私はそれが良いと思い自主的にしています）。
+http://takuri.realwork.jp/freematerials/2607
 
 ## References
-参考にした情報源（サイト・論文）などの情報、リンク
+
 ◇ アンインストール ◇
 	展開してできたフォルダをまるごと削除すれば、アンインストール完了です。
 	レジストリは一切変更していません。
@@ -44,13 +58,13 @@ This software is released under the MIT License, see LICENSE.
 	いかなる損害についても、製作者は責任を負いません。
 
 ◇ 転載 ◇
-	転載はご自由にどうぞ。許可不要、著作権表記も不要。
+　　　　　　　　　　　　　　転載の際は下記の連絡先までご一報お願いいたします。
 
 ----------
 ◇ 連絡先 ◇
-	本サイト : http://y.to.cx/
-	ブログ  : http://asrite.blog35.fc2.com/
-	メールは、本サイトの「メールフォーム」をご利用ください。
+	本サイト :http://35.74.112.243
+	ブログ  : https://nsnk373programming.hatenadiary.com/
+	メール　　：nashineko3737@gmail.com
 
 ◇ 履歴 ◇
-	09/04/13 ver1.0完成。
+	21/5/26 ver1.0完成。
