@@ -1,24 +1,49 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+画像
 
-Things you may want to cover:
+# リポジトリ名
+Any fish
+釣果投稿、船宿検索アプリです
 
-* Ruby version
+## Dependency
+使用言語とバージョン、必要なライブラリとそのバージョンを書く
+Pythonならrequirements.txtを用意するのも良い
 
-* System dependencies
+## Setup
+セットアップ方法を書く。用意するハードウェアとソフトウェアをセットアップするためのコマンドを記載する
 
-* Configuration
+## Usage
+使い方。なるべく具体的に書く。サンプルも書く
 
-* Database creation
+## License
+This software is released under the MIT License, see LICENSE.
 
-* Database initialization
+## Authors
+作者を明示する。特に、他者が作成したコードを利用する場合は、そのコードのライセンスに従った上で、リポジトリのそれぞれのコードのオリジナルの作者が誰か分かるように明示する（私はそれが良いと思い自主的にしています）。
 
-* How to run the test suite
+## References
+参考にした情報源（サイト・論文）などの情報、リンク
+◇ アンインストール ◇
+	展開してできたフォルダをまるごと削除すれば、アンインストール完了です。
+	レジストリは一切変更していません。
 
-* Services (job queues, cache servers, search engines, etc.)
+◇ つかいかた ◇
+	同梱の「template.txt」を適当に書き加えることで、
+	あなたのソフトウェアのお供にしてください。
 
-* Deployment instructions
+◇ 免責 ◇
+	このソフトを使用することにより発生した
+	いかなる損害についても、製作者は責任を負いません。
 
-* ...
+◇ 転載 ◇
+	転載はご自由にどうぞ。許可不要、著作権表記も不要。
+
+----------
+◇ 連絡先 ◇
+	本サイト : http://y.to.cx/
+	ブログ  : http://asrite.blog35.fc2.com/
+	メールは、本サイトの「メールフォーム」をご利用ください。
+
+◇ 履歴 ◇
+	09/04/13 ver1.0完成。
