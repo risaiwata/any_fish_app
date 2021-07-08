@@ -16,7 +16,6 @@
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-
 /public/assets
 .byebug_history
 
@@ -24,8 +23,7 @@
 /config/master.key
 
 /public/packs
-/public/uploads
-/public/packs-test
+/public/uploadscpublic/packs-test
 /node_modules
 /yarn-error.log
 yarn-debug.log*
